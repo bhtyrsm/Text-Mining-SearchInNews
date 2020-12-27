@@ -1,2 +1,2 @@
-# TextMining-SearchInNews
+# Simple Project - TextMining-SearchInNews
  
