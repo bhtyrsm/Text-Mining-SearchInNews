@@ -8,3 +8,6 @@ C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\ob
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining-SearchInNews.csproj.CoreCompileInputs.cache
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining-SearchInNews.exe
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining-SearchInNews.pdb
+C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\bin\Debug\HtmlAgilityPack.dll
+C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\bin\Debug\HtmlAgilityPack.xml
+C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining-SearchInNews.csproj.CopyComplete
