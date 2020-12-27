@@ -1,7 +1,6 @@
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\bin\Debug\TextMining-SearchInNews.exe.config
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\bin\Debug\TextMining-SearchInNews.exe
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\bin\Debug\TextMining-SearchInNews.pdb
-C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining-SearchInNews.csprojAssemblyReference.cache
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining_SearchInNews.frmMain.resources
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining_SearchInNews.Properties.Resources.resources
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining-SearchInNews.csproj.GenerateResource.cache
