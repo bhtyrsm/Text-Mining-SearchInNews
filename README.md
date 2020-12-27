@@ -1,2 +1,2 @@
-# Simple Project - TextMining-SearchInNews
+# Simple C# Winform Project - TextMining-SearchInNews
  
