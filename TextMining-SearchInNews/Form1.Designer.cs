@@ -1,6 +1,6 @@
 ﻿namespace TextMining_SearchInNews
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.gridViewNews = new System.Windows.Forms.DataGridView();
+            this.btnGetNews = new System.Windows.Forms.Button();
+            this.btnSeacrh = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewNews)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // gridViewNews
+            // 
+            this.gridViewNews.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.gridViewNews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewNews.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gridViewNews.Location = new System.Drawing.Point(12, 100);
+            this.gridViewNews.Name = "gridViewNews";
+            this.gridViewNews.RowTemplate.Height = 24;
+            this.gridViewNews.Size = new System.Drawing.Size(854, 337);
+            this.gridViewNews.TabIndex = 0;
+            // 
+            // btnGetNews
+            // 
+            this.btnGetNews.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnGetNews.ForeColor = System.Drawing.Color.White;
+            this.btnGetNews.Location = new System.Drawing.Point(12, 55);
+            this.btnGetNews.Name = "btnGetNews";
+            this.btnGetNews.Size = new System.Drawing.Size(167, 39);
+            this.btnGetNews.TabIndex = 1;
+            this.btnGetNews.Text = "GET NEWS";
+            this.btnGetNews.UseVisualStyleBackColor = false;
+            // 
+            // btnSeacrh
+            // 
+            this.btnSeacrh.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSeacrh.ForeColor = System.Drawing.Color.White;
+            this.btnSeacrh.Location = new System.Drawing.Point(699, 55);
+            this.btnSeacrh.Name = "btnSeacrh";
+            this.btnSeacrh.Size = new System.Drawing.Size(167, 39);
+            this.btnSeacrh.TabIndex = 2;
+            this.btnSeacrh.Text = "SEARCH";
+            this.btnSeacrh.UseVisualStyleBackColor = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSearch.Location = new System.Drawing.Point(511, 55);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(182, 39);
+            this.txtSearch.TabIndex = 3;
+            // 
+            // frmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(878, 449);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnSeacrh);
+            this.Controls.Add(this.btnGetNews);
+            this.Controls.Add(this.gridViewNews);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "frmMain";
+            this.Text = "Text Mining in News";
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewNews)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView gridViewNews;
+        private System.Windows.Forms.Button btnGetNews;
+        private System.Windows.Forms.Button btnSeacrh;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
 
