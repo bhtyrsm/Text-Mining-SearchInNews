@@ -24,6 +24,8 @@ namespace TextMining_SearchInNews
             InitializeComponent();
         }
 
+      
+
         /// <summary>
         /// Page Load
         /// </summary>
@@ -42,21 +44,40 @@ namespace TextMining_SearchInNews
             List<NewsDetail> totalNews = new List<NewsDetail>();
             if (news.NewsList != null && news.NewsList.Count() > 0)
             {
-              foreach(var item in news.NewsList)
+                foreach (var item in news.NewsList)
                 {
-                    var response = GetNews(item.Source, item.Link);
-                    totalNews.AddRange(response);
+                    var responses = GetNews(item.Source, item.Link);
+                    totalNews.AddRange(responses);
                 }
             }
-
+           
             gridViewNews.DataSource = totalNews;
-            gridViewNews.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            gridViewNews.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void btnSeacrh_Click(object sender, EventArgs e)
         {
+            string searchValue = txtSearch.Text;
+            gridViewNews.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            gridViewNews.ClearSelection();
+            try
+            {
+                foreach (DataGridViewRow row in gridViewNews.Rows)
+                {
+                    if (row.Cells[1].Value.ToString().ToLower().Contains(searchValue.ToLower()))
+                    {
+                        row.Selected = true;
+                    }
 
+                    if (row.Cells[2].Value.ToString().ToLower().Contains(searchValue.ToLower()))
+                    {
+                        row.Selected = true;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
 
 
@@ -97,7 +118,7 @@ namespace TextMining_SearchInNews
             try
             {
                 bool in_item = false;
-                string[] arr = { "", "", "" };
+                string[] arr = { "", "", "" ,""};
                 List<NewsDetail> newsDetails = new List<NewsDetail>();
 
                 WebClient client = new WebClient();
@@ -132,6 +153,13 @@ namespace TextMining_SearchInNews
                                         arr[0] = reader.ReadString();
 
                                     }
+
+                                    if ((reader.Name == "link") && (in_item))
+                                    {
+                                        arr[3] = reader.ReadString();
+
+                                    }
+                                    
                                     if ((reader.Name == "description") && (in_item))
                                     {
                                         arr[2] = reader.ReadString();
@@ -139,24 +167,27 @@ namespace TextMining_SearchInNews
                                         arr[2] = ExtractText(arr[2]);
                                         arr[2] = RemoveObsolete(arr[2]);
 
+                                        arr[3] = ExtractText(arr[3]);
+                                        arr[3] = RemoveObsolete(arr[3]);
+
                                         NewsDetail newsDetail = new NewsDetail();
                                         newsDetail.Source = source;
                                         newsDetail.Title = arr[1];
-                                        newsDetail.Desciption= arr[2];
+                                        newsDetail.Desciption = arr[2];
+                                        newsDetail.NewsLink = arr[3];
                                         newsDetails.Add(newsDetail);
                                     }
 
                                     break;
-                                case XmlNodeType.Text: 
+                                case XmlNodeType.Text:
                                     break;
-                                case XmlNodeType.EndElement: 
+                                case XmlNodeType.EndElement:
                                     if (reader.Name == "item")
                                     {
                                         in_item = false;
                                     }
                                     break;
                             }
-
                         }
 
                         return newsDetails;
