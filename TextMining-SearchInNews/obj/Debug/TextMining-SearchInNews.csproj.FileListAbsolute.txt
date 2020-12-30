@@ -11,3 +11,4 @@ C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\bi
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\bin\Debug\HtmlAgilityPack.xml
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining-SearchInNews.csproj.CopyComplete
 C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\obj\Debug\TextMining-SearchInNews.csprojAssemblyReference.cache
+C:\Users\TCBSIME\source\repos\TextMining-SearchInNews\TextMining-SearchInNews\bin\Debug\HtmlAgilityPack.pdb
