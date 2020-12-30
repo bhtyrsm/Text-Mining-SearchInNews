@@ -50,8 +50,12 @@ namespace TextMining_SearchInNews
                     totalNews.AddRange(responses);
                 }
             }
-           
+
+            int row = 0;
+            totalNews.ForEach(c => { c.Row = row; row= row+1; });
             gridViewNews.DataSource = totalNews;
+            gridViewNews.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //gridViewNews.ScrollBars = ScrollBars.Both;
         }
 
         private void btnSeacrh_Click(object sender, EventArgs e)
@@ -78,6 +82,8 @@ namespace TextMining_SearchInNews
             {
                 MessageBox.Show(exc.Message);
             }
+
+            MessageBox.Show("Search Completed","Process", MessageBoxButtons.OK);
         }
 
 
